@@ -5,46 +5,216 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servidor de Minecraft</title>
+    <link rel="stylesheet" href="reset.css">
     <style>
+        @font-face {
+            font-family: "Minecraftia";
+            src: url("assets/Minecraftia-Regular.ttf");
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
-            margin: 0;
-            height: 100vh;
-            background-color: gray;
+            padding: 100px;
+            background-image: url("assets/background.gif");
+            background-size: cover;
+
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            gap: 3em;
+
+            user-select: none;
+
+            cursor: url("assets/cursor/customcursor.cur"), auto;
+        }
+
+        a {
+            cursor: url("assets/cursor/customcursor-cross.cur"), auto;
+        }
+
+        .mcButton {
+            width: 100%;
+            padding: 0.5em;
+            background-image: url("assets/button-background.png");
+
+            border-style: solid;
+            border-width: 2px;
+            border-bottom-width: 4px;
+            border-color: #aaa #565656 #565656 #aaa;
+            outline: 2px solid #000;
+
             display: flex;
             justify-content: center;
             align-items: center;
+            flex: 1;
+
+            color: white;
+            font-family: 'Minecraftia';
+            text-shadow: 3px 3px #4c4c4c;
+
+            image-rendering: pixelated;
         }
 
-        p {
-            font-size: 4em;
-            font-family: sans-serif;
-            font-weight: bold;
-            color: white;
+        .mcButton:hover {
+            background-image: url("assets/button-background-hover.png");
+            border-color: #bdc6ff #59639a #59639a #bdc6ff;
+            color: yellow;
+        }
+
+        .mcButton.-icon {
+            padding: 0;
+            flex: 0;
+
+            > img {
+                width: 40px;
+                image-rendering: pixelated;
+            }
+        }
+
+        .title {
+            width: min(600px, 90vw);
+        }
+
+        .menu {
+            width: min(500px, 90vw);
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        .status {
+            display: flex;
+            gap: 1em;
+        }
+
+        .players {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1em;
+        }
+
+        .players_info {
+            width: 100%;
+            display: flex;
+            gap: 1em;
+        }
+
+        .players_grid {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+
+        .players_entry {
+            width: clamp(50%, 50%, 100%);
+            display: flex;
+            gap: 1em;
+        }
+
+        .players_skin {
+            width: 24px;
+            image-rendering: pixelated;
+        }
+
+        .players_name {
+            flex: 1;
+            text-align: center;
+        }
+
+        .discord {
+            width: 50px;
+            margin-top: auto;
+            align-self: flex-end;
         }
     </style>
 </head>
 
 <body>
-    <div>
-        <p>Conectando...</p>
+    <img class="title" src="assets/title.png" alt="Ufiscraft">
+
+    <div class="menu">
+        <div class="status">
+            <div class="status_icon mcButton -icon">
+                <img src="assets/icons/closed-lock.png" alt="">
+            </div>
+            <div class="status_text mcButton">
+                Conectando...
+            </div>
+        </div>
+
+        <div class="players" hidden>
+            <div class="players_info">
+                <div class="players_icon mcButton -icon">
+                    <img src="assets/icons/globe.png" alt="">
+                </div>
+                <div class="players_text mcButton">
+                    Sem jogadores
+                </div>
+            </div>
+            <div class="players_grid" hidden>
+            </div>
+        </div>
     </div>
 
+    <a class="discord" href=""><img class="discord" src="assets/discord.webp" alt="Servidor do Discord"></a>
+
     <script>
+        const address = "***REMOVED***";
+        // const address = "mc.hypixel.net"; // For testing when reloading frequently
+
+        const statusText = document.querySelector(".status_text");
+        const statusIcon = document.querySelector(".status_icon");
+        const players = document.querySelector(".players");
+        const playersText = document.querySelector(".players_text");
+        const playersGrid = document.querySelector(".players_grid");
+
         async function main() {
-            const textElement = document.querySelector("p");
-            const address = "***REMOVED***";
             const response = await fetch("https://api.mcsrvstat.us/3/" + encodeURIComponent(address));
             const data = await response.json();
 
             console.log(data);
 
             if (data.online) {
-                textElement.textContent = "ABERTO";
-                document.body.style.backgroundColor = "#1aad10";
+                statusText.textContent = "O servidor está aberto!";
+                statusIcon.src = "assets/icon/open-lock.png";
+                setPlayerList(data.players);
             } else {
-                textElement.textContent = "FECHADO";
-                document.body.style.backgroundColor = "#de1212";
+                statusText.textContent = "O servidor está fechado!";
             }
+        }
+
+        function setPlayerList(playerData) {
+            players.removeAttribute("hidden");
+
+            if (playerData.online === 0)
+                return;
+
+            playersText.textContent = "Jogadores online";
+            playersGrid.removeAttribute("hidden");
+
+            for (const p of playerData.list)
+                playersGrid.append(generatePlayerEntry(p.name));
+        }
+
+        function generatePlayerEntry(name) {
+            const skin = document.createElement("img");
+            skin.classList.add("players_skin");
+            skin.onerror = () => skin.src = "assets/players/default.png";
+            skin.src = `assets/players/${name}.png`;
+
+            const nameDiv = document.createElement("div");
+            nameDiv.classList.add("players_name");
+            nameDiv.textContent = `${name}`;
+
+            const entry = document.createElement("div");
+            entry.classList.add("players_entry", "mcButton");
+            entry.append(skin, nameDiv);
+
+            return entry;
         }
 
         main();
