@@ -95,14 +95,14 @@ a {
 }
 
 .players_grid {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
 }
 
 .players_entry {
-    width: clamp(50%, 50%, 100%);
+    /* width: clamp(50%, 50%, 100%); */
     background-image: url("assets/button-background-disabled.png");
     border: none;
     display: flex;
