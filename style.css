@@ -29,6 +29,7 @@ a {
     width: 100%;
     padding: 0.5em;
     background-image: url("assets/button-background.png");
+    background-size: 125%;
 
     border-style: solid;
     border-width: 2px;
@@ -102,8 +103,16 @@ a {
 
 .players_entry {
     width: clamp(50%, 50%, 100%);
+    background-image: url("assets/button-background-disabled.png");
+    border: none;
     display: flex;
     gap: 1em;
+}
+
+.players_entry:hover {
+    border: none;
+    background-image: url("assets/button-background-disabled.png");
+    color: white;
 }
 
 .players_skin {
