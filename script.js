@@ -53,3 +53,12 @@ function generatePlayerEntry(name) {
 }
 
 main();
+
+// Windows renders text severe pixels above center, so this fixes it
+// Looks normal on Android and Linux, unknown about iOS and macOS
+if (navigator.userAgent.match(/Windows/)) {
+    for (const button of document.querySelectorAll(".mcButton:not(.-icon)")) {
+        button.style.paddingTop = "0.7em";
+        button.style.paddingBottom = "0";
+    }
+}
