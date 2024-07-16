@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "Minecraftia";
+    src: url("assets/Minecraftia-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    padding: 100px;
+    background-image: url("assets/background.gif");
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 3em;
+
+    user-select: none;
+
+    cursor: url("assets/cursor/customcursor.cur"), auto;
+}
+
+a {
+    cursor: url("assets/cursor/customcursor-cross.cur"), auto;
+}
+
+.mcButton {
+    width: 100%;
+    padding: 0.5em;
+    background-image: url("assets/button-background.png");
+
+    border-style: solid;
+    border-width: 2px;
+    border-bottom-width: 4px;
+    border-color: #aaa #565656 #565656 #aaa;
+    outline: 2px solid #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    color: white;
+    font-family: 'Minecraftia';
+    text-shadow: 3px 3px #4c4c4c;
+
+    image-rendering: pixelated;
+}
+
+.mcButton:hover {
+    background-image: url("assets/button-background-hover.png");
+    border-color: #bdc6ff #59639a #59639a #bdc6ff;
+    color: yellow;
+}
+
+.mcButton.-icon {
+    padding: 0;
+    flex: 0;
+
+    >img {
+        width: 40px;
+        image-rendering: pixelated;
+    }
+}
+
+.title {
+    width: min(600px, 90vw);
+}
+
+.menu {
+    width: min(500px, 90vw);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.status {
+    display: flex;
+    gap: 1em;
+}
+
+.players {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.players_info {
+    width: 100%;
+    display: flex;
+    gap: 1em;
+}
+
+.players_grid {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.players_entry {
+    width: clamp(50%, 50%, 100%);
+    display: flex;
+    gap: 1em;
+}
+
+.players_skin {
+    width: 24px;
+    image-rendering: pixelated;
+}
+
+.players_name {
+    flex: 1;
+    text-align: center;
+}
+
+.discord {
+    width: 50px;
+    margin-top: auto;
+    /* align-self: flex-end; */
+}
