@@ -7,7 +7,7 @@
     <title>Servidor de Minecraft</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    </style>
+    <link rel="stylesheet" href="widget.css">
 </head>
 
 <body>
@@ -15,29 +15,30 @@
 
     <div class="menu">
         <div class="status">
-            <div class="status_icon mcButton -icon">
+            <div class="status_icon widget -icon">
                 <img src="assets/icons/closed-lock.png" alt="">
             </div>
-            <div class="status_text mcButton">
+            <div class="status_text widget">
                 Conectando...
             </div>
         </div>
 
         <div class="players" hidden>
-            <div class="players_info">
-                <div class="players_icon mcButton -icon">
+            <div class="players_top">
+                <div class="players_icon widget -icon">
                     <img src="assets/icons/globe.png" alt="">
                 </div>
-                <div class="players_text mcButton">
+                <div class="players_text widget">
                     Sem jogadores
                 </div>
             </div>
-            <div class="players_grid" hidden>
-            </div>
+            <div class="players_grid" hidden></div>
         </div>
     </div>
 
-    <a class="discord" href=""><img class="discord" src="assets/discord.webp" alt="Servidor do Discord"></a>
+    <a class="discord" href="">
+        <img class="discord" src="assets/discord.webp" alt="Servidor do Discord">
+    </a>
 
     <script src="script.js"></script>
 </body>

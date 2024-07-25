@@ -1,8 +1,10 @@
 const address = "***REMOVED***";
 // const address = "mc.hypixel.net"; // For testing when reloading frequently
 
+main();
+
+const statusIcon = document.querySelector(".status_icon");
 const statusText = document.querySelector(".status_text");
-const statusIcon = document.querySelector(".status_icon > img");
 const players = document.querySelector(".players");
 const playersText = document.querySelector(".players_text");
 const playersGrid = document.querySelector(".players_grid");
@@ -46,13 +48,11 @@ function generatePlayerEntry(name) {
     nameDiv.textContent = `${name}`;
 
     const entry = document.createElement("div");
-    entry.classList.add("players_entry", "mcButton");
+    entry.classList.add("players_entry", "widget", "-disabled");
     entry.append(skin, nameDiv);
 
     return entry;
 }
-
-main();
 
 // Windows renders text severe pixels above center, so this fixes it
 // Looks normal on Android and Linux, unknown about iOS and macOS

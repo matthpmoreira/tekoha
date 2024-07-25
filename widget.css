@@ -1,0 +1,50 @@
+.widget {
+    padding: 0.5em;
+    background-image: url("assets/button-background.png");
+    background-size: 125%;
+    border: 2px solid black;
+    box-shadow:
+        inset 2px 2px #aaa,
+        inset -2px -4px #565656;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    flex: 1;
+
+    color: white;
+    font-family: "Minecraftia", serif;
+    text-shadow: 3px 3px #4c4c4c;
+
+    image-rendering: pixelated;
+
+    &:hover {
+        background-image: url("assets/button-background-hover.png");
+        box-shadow:
+            inset 2px 2px #bdc6ff,
+            inset -2px -4px #59639a;
+        color: yellow;
+    }
+}
+
+.widget.-icon {
+    padding: 0;
+    flex: 0;
+
+    >img {
+        width: 40px;
+        image-rendering: pixelated;
+    }
+}
+
+.widget.-disabled {
+    background-image: url("assets/button-background-disabled.png");
+    box-shadow: unset;
+
+    &:hover {
+        background-image: url("assets/button-background-disabled.png");
+        box-shadow: unset;
+        color: white;
+    }
+}

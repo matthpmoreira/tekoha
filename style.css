@@ -6,18 +6,17 @@
 }
 
 body {
-    padding: 100px;
+    padding: 100px 20px;
     background-image: url("assets/background.webp");
     background-size: cover;
+    background-attachment: fixed;
 
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     gap: 3em;
 
     user-select: none;
-
     cursor: url("assets/cursor/customcursor.cur"), auto;
 }
 
@@ -25,52 +24,14 @@ a {
     cursor: url("assets/cursor/customcursor-cross.cur"), auto;
 }
 
-.mcButton {
-    width: 100%;
-    padding: 0.5em;
-    background-image: url("assets/button-background.png");
-    background-size: 125%;
-
-    border-style: solid;
-    border-width: 2px;
-    border-bottom-width: 4px;
-    border-color: #aaa #565656 #565656 #aaa;
-    outline: 2px solid #000;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-
-    color: white;
-    font-family: 'Minecraftia';
-    text-shadow: 3px 3px #4c4c4c;
-
-    image-rendering: pixelated;
-}
-
-.mcButton:hover {
-    background-image: url("assets/button-background-hover.png");
-    border-color: #bdc6ff #59639a #59639a #bdc6ff;
-    color: yellow;
-}
-
-.mcButton.-icon {
-    padding: 0;
-    flex: 0;
-
-    >img {
-        width: 40px;
-        image-rendering: pixelated;
-    }
-}
-
 .title {
-    width: min(600px, 90vw);
+    width: 100%;
+    max-width: 600px;
 }
 
 .menu {
-    width: min(500px, 90vw);
+    width: 100%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -84,35 +45,27 @@ a {
 .players {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 1em;
 }
 
-.players_info {
-    width: 100%;
+.players_top {
     display: flex;
     gap: 1em;
 }
 
 .players_grid {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1em;
 }
 
 .players_entry {
-    /* width: clamp(50%, 50%, 100%); */
-    background-image: url("assets/button-background-disabled.png");
-    border: none;
     display: flex;
-    gap: 1em;
-}
+    overflow: hidden;
 
-.players_entry:hover {
-    border: none;
-    background-image: url("assets/button-background-disabled.png");
-    color: white;
+    &:nth-child(odd):last-child {
+        grid-column: 1 / 3;
+    }
 }
 
 .players_skin {
@@ -128,5 +81,4 @@ a {
 .discord {
     width: 50px;
     margin-top: auto;
-    /* align-self: flex-end; */
 }
