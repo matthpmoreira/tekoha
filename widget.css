@@ -1,7 +1,7 @@
 .widget {
     padding: 0.5em;
     background-image: url("assets/button-background.png");
-    background-size: 125%;
+    background-size: calc(196px * 2); /* Based on image width */
     border: 2px solid black;
     box-shadow:
         inset 2px 2px #aaa,
