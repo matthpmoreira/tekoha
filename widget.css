@@ -8,7 +8,7 @@
         inset -2px -4px #565656;
 
     display: flex;
-    justify-content: center;
+    justify-content: safe center;
     align-items: center;
     gap: 1em;
     flex: 1;

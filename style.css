@@ -61,7 +61,7 @@ a {
 
 .players_entry {
     display: flex;
-    overflow: hidden;
+    overflow: scroll;
 
     &:nth-child(odd):last-child {
         grid-column: 1 / 3;
@@ -69,7 +69,7 @@ a {
 }
 
 .players_skin {
-    width: 24px;
+    min-width: 24px;
     image-rendering: pixelated;
 }
 
