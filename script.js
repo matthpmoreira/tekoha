@@ -3,7 +3,7 @@ const address = "***REMOVED***";
 
 main();
 
-const statusIcon = document.querySelector(".status_icon");
+const statusIcon = document.querySelector(".status_icon img");
 const statusText = document.querySelector(".status_text");
 const players = document.querySelector(".players");
 const playersText = document.querySelector(".players_text");
