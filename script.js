@@ -1,7 +1,9 @@
 const address = "***REMOVED***";
 // const address = "mc.hypixel.net"; // For testing when reloading frequently
 
+fixTextOnWindows();
 main();
+fixTextOnWindows();
 
 const statusIcon = document.querySelector(".status_icon img");
 const statusText = document.querySelector(".status_text");
@@ -54,10 +56,12 @@ function generatePlayerEntry(name) {
 }
 
 // Windows renders text severe pixels above center, so this fixes it
-// Looks normal on Android and Linux, unknown about iOS and macOS
-if (navigator.userAgent.match(/Windows/)) {
-    for (const button of document.querySelectorAll(".mcButton:not(.-icon)")) {
-        button.style.paddingTop = "0.7em";
-        button.style.paddingBottom = "0";
+// Looks normal on Android and Linux, unknown on iOS and macOS
+function fixTextOnWindows() {
+    if (navigator.userAgent.match(/Windows/)) {
+        for (const button of document.querySelectorAll(".widget:not(.-icon)")) {
+            button.style.paddingTop = "0.7em";
+            button.style.paddingBottom = "0";
+        }
     }
 }
