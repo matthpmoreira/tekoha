@@ -25,13 +25,12 @@ async function main() {
 }
 
 function setPlayerList(playerData) {
-    players.removeAttribute("hidden");
+    players.style.display = "flex";
 
     if (playerData.online === 0)
         return;
 
     playersText.textContent = "Jogadores online";
-    playersGrid.removeAttribute("hidden");
 
     for (const p of playerData.list)
         playersGrid.append(generatePlayerEntry(p.name));
