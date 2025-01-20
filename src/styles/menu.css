@@ -1,0 +1,71 @@
+.menu {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu_row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menu_button {
+    all: unset;
+
+    width: 100%;
+    padding: 0.5em 2em;
+    background-image: url("/assets/button-background.png");
+    background-size: calc(196px * 2); /* Based on image proportions */
+    border: 2px solid black;
+    box-shadow:
+        inset 2px 2px #aaa,
+        inset -2px -4px #565656;
+
+    color: white;
+    font-family: "Minecraftia", sans-serif;
+    text-shadow: 2px 2px #4c4c4c;
+
+    user-select: none;
+    image-rendering: pixelated;
+    cursor:
+        url("/assets/cursor/pointer.png") 10 10,
+        pointer;
+
+    display: flex;
+    justify-content: safe center;
+    align-items: center;
+
+    &:hover {
+        color: yellow;
+        background-image: url("/assets/button-background-hover.png");
+        box-shadow:
+            inset 2px 2px #bdc6ff,
+            inset -2px -4px #59639a;
+    }
+}
+
+.menu_button.-icon {
+    padding: 2px;
+    flex-basis: 0;
+
+    img {
+        height: 30px; /* Based on image proportions */
+    }
+}
+
+.menu_button:disabled {
+    background-image: url("/assets/button-background-disabled.png");
+    box-shadow: unset;
+
+    &:hover {
+        background-image: url("/assets/button-background-disabled.png");
+        box-shadow: unset;
+        color: white;
+    }
+}

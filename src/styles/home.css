@@ -1,0 +1,56 @@
+.title {
+    max-width: 600px;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    user-select: none;
+}
+
+.logo {
+    width: 100%;
+}
+
+.players_panel {
+    max-height: 130px;
+    padding: calc(6px + 0.5rem);
+    background-color: #212121;
+    overflow: scroll;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    image-rendering: pixelated;
+    border: 6px solid transparent;
+    border-image-source: url("/assets/panel-border.png");
+    border-image-repeat: stretch;
+    border-image-slice: 3;
+}
+
+.players_entry {
+    display: flex;
+    gap: 1rem;
+}
+
+.players_skin {
+    height: 1em;
+    image-rendering: pixelated;
+}
+
+.players_name {
+    color: white;
+    font-family: "Minecraftia", sans-serif;
+    text-shadow: 2px 2px #4c4c4c;
+
+    cursor:
+        url("/assets/cursor/text.png") 6 10,
+        text;
+}
+
+.footer {
+    position: absolute;
+    bottom: 50px;
+}
+
+.footer_link img {
+    width: 50px;
+}
