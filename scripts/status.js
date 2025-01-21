@@ -32,7 +32,7 @@ function enableUI(status) {
     textElement.disabled = false;
     textElement.textContent = status.online ? "Aberto!" : "Fechado!";
 
-    playersTextElement.textContent = (status.online ? "0" : status.players.online) + " Jogadores";
+    playersTextElement.textContent = (status.online ? status.players.online : "0") + " Jogadores";
 
     if (status.players?.list) {
         playersTextElement.disabled = false;
