@@ -51,7 +51,7 @@
     }
 }
 
-.menu_button:hover:enabled {
+.menu_button:hover:not([disabled]) {
     color: yellow;
     background-image: url("/assets/gui/button-background-hover.png");
     box-shadow:
