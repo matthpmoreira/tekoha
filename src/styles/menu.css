@@ -60,8 +60,9 @@
 }
 
 .menu_button:disabled {
-    background-image: url("/assets/button-background-disabled.png");
     box-shadow: unset;
+    background-image: url("/assets/button-background-disabled.png");
+    cursor: url("/assets/cursor/default.png"), default;
 
     &:hover {
         background-image: url("/assets/button-background-disabled.png");
