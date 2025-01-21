@@ -9,10 +9,8 @@ const playersGridElement = document.querySelector("#players_grid");
 
 async function queryStatus() {
     disableUI();
-
-    const data = await fetch(api + encodeURIComponent(address)).then(res => res.json());
-
-    enableUI(data);
+    const status = await fetch(api + encodeURIComponent(address)).then(res => res.json());
+    enableUI(status);
 }
 
 function disableUI() {
@@ -27,18 +25,18 @@ function disableUI() {
     playersGridElement.style.display = "none";
 }
 
-function enableUI(data) {
+function enableUI(status) {
     iconElement.disabled = false;
-    iconImgElement.src = "/assets/icons/" + (data.online ? "success.png" : "failure.png");
+    iconImgElement.src = "/assets/icons/" + (status.online ? "success.png" : "failure.png");
 
     textElement.disabled = false;
-    textElement.textContent = data.online ? "Aberto!" : "Fechado!";
+    textElement.textContent = status.online ? "Aberto!" : "Fechado!";
 
-    playersTextElement.textContent = data.players.online + " Jogadores";
+    playersTextElement.textContent = (status.online ? "0" : status.players.online) + " Jogadores";
 
-    if ("list" in data.players) {
+    if (status.players?.list) {
         playersTextElement.disabled = false;
-        updatePlayerGrid(data.players.list.map(player => player.name));
+        updatePlayerGrid(status.players.list.map(player => player.name));
     }
 }
 
