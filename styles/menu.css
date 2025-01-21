@@ -20,7 +20,7 @@
 
     width: 100%;
     padding: 0.5em 2em;
-    background-image: url("/assets/button-background.png");
+    background-image: url("/assets/gui/button-background.png");
     background-size: calc(196px * 2); /* Based on image proportions */
     border: 2px solid black;
     box-shadow:
@@ -53,7 +53,7 @@
 
 .menu_button:hover:enabled {
     color: yellow;
-    background-image: url("/assets/button-background-hover.png");
+    background-image: url("/assets/gui/button-background-hover.png");
     box-shadow:
         inset 2px 2px #bdc6ff,
         inset -2px -4px #59639a;
@@ -61,6 +61,6 @@
 
 .menu_button:disabled {
     box-shadow: unset;
-    background-image: url("/assets/button-background-disabled.png");
+    background-image: url("/assets/gui/button-background-disabled.png");
     cursor: url("/assets/cursor/default.png"), default;
 }

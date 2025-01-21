@@ -40,7 +40,7 @@
 
     image-rendering: pixelated;
     border: 6px solid transparent;
-    border-image-source: url("/assets/panel-border.png");
+    border-image-source: url("/assets/gui/panel-border.png");
     border-image-repeat: stretch;
     border-image-slice: 3;
 }
