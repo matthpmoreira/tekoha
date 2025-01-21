@@ -3,10 +3,29 @@
     padding: 0 1rem;
     margin-bottom: 2rem;
     user-select: none;
+
+    font-family: "Minecraftia", sans-serif;
 }
 
 .logo {
     width: 100%;
+}
+
+.tooltip {
+    display: none;
+    max-width: 600px;
+    padding: 1rem;
+    border: 6px solid transparent;
+    border-image-source: url("/assets/gui/tooltip-border.png");
+    border-image-slice: 3 fill;
+    border-image-repeat: repeat;
+
+    color: white;
+    line-height: 1.5rem;
+
+    position: fixed;
+    pointer-events: none;
+    image-rendering: pixelated;
 }
 
 .players_panel {
