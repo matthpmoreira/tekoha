@@ -13,32 +13,34 @@
     </head>
 
     <body>
-        <div class="title">
-            <img id="logo" class="logo" src="/assets/logo.png" alt="Tekohá" draggable="false" />
-            <div id="tekoha-tooltip" class="tooltip">
-                Tekohá é o lugar físico - incluindo terra, floresta, campos, cursos de água, plantas e remédios - onde o
-                modo de vida dos povos indígenas Guarani e Kaiowá se desenvolve.
-            </div>
-        </div>
-
-        <div class="menu">
-            <div class="menu_row">
-                <button id="status_icon" class="menu_button -icon" disabled>
-                    <img src="/assets/icons/connecting.webp" alt="" />
-                </button>
-                <button id="status_text" class="menu_button" disabled>Conectando...</button>
+        <main class="container">
+            <div class="title">
+                <img id="logo" class="logo" src="/assets/logo.png" alt="Tekohá" draggable="false" />
+                <div id="tekoha-tooltip" class="tooltip">
+                    Tekohá é o lugar físico - incluindo terra, floresta, campos, cursos de água, plantas e remédios -
+                    onde o modo de vida dos povos indígenas Guarani e Kaiowá se desenvolve.
+                </div>
             </div>
 
-            <div class="menu_row">
-                <button id="players_text" class="menu_button" disabled>Conectando...</button>
-            </div>
+            <div class="menu">
+                <div class="menu_row">
+                    <button id="status_icon" class="menu_button -icon" disabled>
+                        <img src="/assets/icons/connecting.webp" alt="" />
+                    </button>
+                    <button id="status_text" class="menu_button" disabled>Conectando...</button>
+                </div>
 
-            <div id="players_grid" class="players_panel"></div>
+                <div class="menu_row">
+                    <button id="players_text" class="menu_button" disabled>Conectando...</button>
+                </div>
 
-            <div class="menu_row">
-                <a id="mods" class="menu_button" href="/mods"> Mods </a>
+                <div id="players_grid" class="players_panel"></div>
+
+                <div class="menu_row">
+                    <a id="mods" class="menu_button" href="/mods"> Mods </a>
+                </div>
             </div>
-        </div>
+        </main>
 
         <div class="footer">
             <a class="footer_link" href="/discord">

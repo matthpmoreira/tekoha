@@ -1,35 +1,63 @@
-.title {
-    max-width: 600px;
-    padding: 0 1rem;
-    margin-bottom: 2rem;
-    user-select: none;
+body {
+    padding: 50px 25px;
 
-    font-family: "Minecraftia", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.container {
+    width: min(600px, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    flex: 1;
+}
+
+.title {
+    user-select: none;
 }
 
 .logo {
-    width: 100%;
+    max-width: 100%;
 }
 
 .tooltip {
     display: none;
-    max-width: 600px;
+    max-width: 500px;
     padding: 1rem;
     border: 6px solid transparent;
-    border-image-source: url("/assets/gui/tooltip-border.png");
-    border-image-slice: 3 fill;
-    border-image-repeat: repeat;
+    border-image: url("/assets/gui/tooltip-border.png") 3 fill / 1 repeat;
 
     color: white;
     line-height: 1.5rem;
+    font-family: "Minecraftia", sans-serif;
 
     position: fixed;
     pointer-events: none;
     image-rendering: pixelated;
 }
 
+.menu {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.menu_row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 .players_panel {
-    max-height: 130px;
+    height: min(130px, 100%);
     padding: calc(6px + 0.5rem);
     background-color: #212121;
     overflow: scroll;
@@ -40,9 +68,7 @@
 
     image-rendering: pixelated;
     border: 6px solid transparent;
-    border-image-source: url("/assets/gui/panel-border.png");
-    border-image-repeat: stretch;
-    border-image-slice: 3;
+    border-image: url("/assets/gui/panel-border.png") 3 fill / 1 stretch;
 }
 
 .players_entry {
@@ -63,11 +89,6 @@
     cursor:
         url("/assets/cursor/text.png") 6 10,
         text;
-}
-
-.footer {
-    position: absolute;
-    bottom: 50px;
 }
 
 .footer_link img {

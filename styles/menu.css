@@ -1,25 +1,7 @@
-.menu {
-    width: 100%;
-    max-width: 600px;
-    padding: 0 2rem;
-
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.menu_row {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
 .menu_button {
     all: unset;
 
-    width: 100%;
-    padding: 0.5em 2em;
+    padding: 9px; /* Quite an arbitrary value, but it matches with the 10x10 icons and makes every button have the same height */
     background-image: url("/assets/gui/button-background.png");
     background-size: calc(196px * 2); /* Based on image proportions */
     border: 2px solid black;
@@ -40,14 +22,16 @@
     display: flex;
     justify-content: safe center;
     align-items: center;
+    flex: 1;
 }
 
 .menu_button.-icon {
-    padding: 2px;
-    flex-basis: 0;
+    padding: 2px; /* Inset box shadow size */
+    flex: 0;
 
     img {
-        height: 30px; /* Based on image proportions */
+        display: block;
+        height: 100%;
     }
 }
 
