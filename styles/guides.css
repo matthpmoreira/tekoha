@@ -36,7 +36,7 @@ body {
 .accordion_body {
     background: black;
     border: 6px solid transparent;
-    border-image: url("/assets/gui/panel-border.png") 3 / 1 stretch;
+    border-image: url("/assets/gui/panel-border.png") 3 / 1 / 2px 0 0 stretch;
 
     color: white;
     font-size: 20px;
