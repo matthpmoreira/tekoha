@@ -1,0 +1,59 @@
+body {
+    padding: 50px 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.title {
+    user-select: none;
+}
+
+.logo {
+    max-width: 200px;
+    user-select: none;
+}
+
+.content {
+    width: min(1000px, 100%);
+    padding: 1.5rem;
+    border: 24px solid transparent;
+    border-image: url("/assets/gui/map.png") 8 fill / 1 repeat;
+    image-rendering: pixelated;
+}
+
+.accordion {
+    overflow: hidden;
+}
+
+.accordion_bodyWrapper {
+    height: 0;
+    transition: height 0.09s ease-in-out;
+}
+
+.accordion_body {
+    background: black;
+    border: 6px solid transparent;
+    border-image: url("/assets/gui/panel-border.png") 3 / 1 stretch;
+
+    color: white;
+    font-family: "Minecraftia", sans-serif;
+}
+
+.accordion_body {
+    padding: 1rem;
+}
+
+a:link {
+    color: cornflowerblue;
+}
+
+a:visited {
+    color: mediumpurple;
+}
+
+ul {
+    list-style-type: square;
+}

@@ -25,3 +25,9 @@ a {
         url("/assets/cursor/pointer.png") 10 10,
         pointer;
 }
+
+p {
+    cursor:
+        url("/assets/cursor/text.png") 6 10,
+        text;
+}

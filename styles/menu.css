@@ -12,6 +12,7 @@
     color: white;
     font-family: "Minecraftia", sans-serif;
     text-shadow: 2px 2px #4c4c4c;
+    text-overflow: ellipsis;
     line-height: 1;
 
     user-select: none;
