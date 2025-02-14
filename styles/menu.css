@@ -1,7 +1,7 @@
 .menu_button {
     all: unset;
 
-    padding: 9px; /* Quite an arbitrary value, but it matches with the final size of the icons and makes every button have the same height */
+    padding: 7px; /* Quite an arbitrary value, but it matches with the final size of the icons and makes every button have the same height */
     background-image: url("/assets/gui/button-background.png");
     background-size: calc(196px * 2); /* Based on image proportions */
     border: 2px solid black;
@@ -10,7 +10,8 @@
         inset -2px -4px #565656;
 
     color: white;
-    font-family: "Minecraftia", sans-serif;
+    font-size: 20px;
+    font-family: "Minecraft", sans-serif;
     text-shadow: 2px 2px #4c4c4c;
     text-overflow: ellipsis;
     line-height: 1;

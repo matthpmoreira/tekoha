@@ -39,7 +39,8 @@ body {
     border-image: url("/assets/gui/panel-border.png") 3 / 1 stretch;
 
     color: white;
-    font-family: "Minecraftia", sans-serif;
+    font-size: 20px;
+    font-family: "Minecraft", sans-serif;
 }
 
 .accordion_body {

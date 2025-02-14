@@ -34,8 +34,9 @@ body {
     border-image: url("/assets/gui/tooltip-border.png") 3 fill / 1 repeat;
 
     color: white;
+    font-size: 20px;
     line-height: 1.5rem;
-    font-family: "Minecraftia", sans-serif;
+    font-family: "Minecraft", sans-serif;
 
     position: fixed;
     pointer-events: none;
@@ -85,7 +86,8 @@ body {
 
 .players_name {
     color: white;
-    font-family: "Minecraftia", sans-serif;
+    font-size: 20px;
+    font-family: "Minecraft", sans-serif;
     text-shadow: 2px 2px #4c4c4c;
 
     cursor:
