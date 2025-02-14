@@ -57,8 +57,8 @@ body {
 }
 
 .players_panel {
-    height: min(130px, 100%);
-    padding: calc(6px + 0.5rem);
+    height: min(155px, 100%);
+    padding: 0.66rem;
     background-color: #212121;
     overflow: scroll;
 
@@ -73,10 +73,12 @@ body {
 
 .players_entry {
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
 .players_skin {
+    display: block;
     height: 1em;
     image-rendering: pixelated;
 }
