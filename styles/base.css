@@ -27,7 +27,8 @@ a {
         pointer;
 }
 
-p {
+p,
+li {
     cursor:
         url("/assets/cursor/text.png") 6 10,
         text;
