@@ -6,6 +6,12 @@
     font-display: swap;
 }
 
+:root {
+    --default-cursor: url("/assets/cursor/default.png"), default;
+    --pointer-cursor: url("/assets/cursor/pointer.png") 10 10, pointer;
+    --text-cursor: url("/assets/cursor/text.png") 6 10, text;
+}
+
 body,
 html {
     width: 100%;
@@ -17,19 +23,18 @@ body {
     background-image: url("/assets/background.webp");
     background-attachment: fixed;
     background-size: cover;
+}
 
-    cursor: url("/assets/cursor/default.png"), default;
+body,
+li::marker {
+    cursor: var(--default-cursor);
 }
 
 a {
-    cursor:
-        url("/assets/cursor/pointer.png") 10 10,
-        pointer;
+    cursor: var(--pointer-cursor);
 }
 
 p,
 li {
-    cursor:
-        url("/assets/cursor/text.png") 6 10,
-        text;
+    cursor: var(--text-cursor);
 }

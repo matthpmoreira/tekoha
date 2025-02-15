@@ -18,9 +18,7 @@
 
     user-select: none;
     image-rendering: pixelated;
-    cursor:
-        url("/assets/cursor/pointer.png") 10 10,
-        pointer;
+    cursor: var(--pointer-cursor);
 
     display: flex;
     justify-content: safe center;
@@ -49,7 +47,7 @@
 .menu_button:disabled {
     box-shadow: unset;
     background-image: url("/assets/gui/button-background-disabled.png");
-    cursor: url("/assets/cursor/default.png"), default;
+    cursor: var(--default-cursor);
 }
 
 .panel {

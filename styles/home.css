@@ -84,9 +84,7 @@ body {
 }
 
 .players_name {
-    cursor:
-        url("/assets/cursor/text.png") 6 10,
-        text;
+    cursor: var(--text-cursor);
 }
 
 .footer_link img {
