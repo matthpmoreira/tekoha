@@ -1,4 +1,4 @@
-const address = "play.guildstone.org";
+const address = "Semianarchy.com";
 const api = "https://api.mcsrvstat.us/3/";
 
 const textElement = document.querySelector("#status_text");
