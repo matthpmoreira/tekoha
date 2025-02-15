@@ -41,6 +41,10 @@ function enableUI(status) {
 }
 
 function updatePlayerGrid(playerNames) {
+    while (playersGridElement.lastChild != null) {
+        playersGridElement.lastChild.remove();
+    }
+
     for (const name of playerNames) {
         const skin = document.createElement("img");
         skin.classList.add("players_skin");
@@ -63,8 +67,8 @@ function setButtons() {
     iconElement.addEventListener("click", () => queryStatus());
     textElement.addEventListener("click", () => queryStatus());
     playersTextElement.addEventListener("click", () => {
-        playersGridElement.style.display = "";
-        playersTextElement.disabled = true;
+        const { display } = playersGridElement.style;
+        playersGridElement.style.display = display === "none" ? "" : "none";
     });
 }
 
