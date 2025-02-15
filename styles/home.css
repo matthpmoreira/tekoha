@@ -57,25 +57,24 @@ body {
     gap: 10px;
 }
 
-.players_panel {
+.players_grid {
     height: min(155px, 100%);
     padding: 0.66rem;
-    background-color: #212121;
     overflow: scroll;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
-
-    image-rendering: pixelated;
-    border: 6px solid transparent;
-    border-image: url("/assets/gui/panel-border.png") 3 fill / 1 stretch;
 }
 
 .players_entry {
+    /* (Menu width - padding) / (columns + 1), extra column because of border */
+    min-width: calc(calc(600px - 2rem) / 3);
+
     display: flex;
     align-items: center;
     gap: 1rem;
+    flex: 1;
 }
 
 .players_skin {
@@ -85,11 +84,6 @@ body {
 }
 
 .players_name {
-    color: white;
-    font-size: 20px;
-    font-family: "Minecraft", sans-serif;
-    text-shadow: 2px 2px #4c4c4c;
-
     cursor:
         url("/assets/cursor/text.png") 6 10,
         text;

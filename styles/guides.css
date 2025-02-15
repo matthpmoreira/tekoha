@@ -34,17 +34,11 @@ body {
 }
 
 .accordion_body {
-    background: black;
-    border: 6px solid transparent;
-    border-image: url("/assets/gui/panel-border.png") 3 / 1 / 2px 0 0 stretch;
-
-    color: white;
-    font-size: 20px;
-    font-family: "Minecraft", sans-serif;
+    padding: 1rem;
 }
 
-.accordion_body {
-    padding: 1rem;
+.accordion_body.panel {
+    border-image-outset: 2px 0 0;
 }
 
 a:link {
