@@ -80,7 +80,7 @@ body {
 
 .players_skin {
     display: block;
-    height: 1em;
+    width: 24px; /* Multiple of 8 because skin has 8 pixels across */
     image-rendering: pixelated;
 }
 
