@@ -1,4 +1,4 @@
-const address = "Semianarchy.com";
+const address = "ardakazmc.gleeze.com";
 const api = "https://api.mcsrvstat.us/3/";
 
 const textElement = document.querySelector("#status_text");
