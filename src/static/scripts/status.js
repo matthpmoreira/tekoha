@@ -15,7 +15,7 @@ async function queryStatus() {
 
 function disableUI() {
     iconElement.disabled = true;
-    iconImgElement.src = "/assets/icons/connecting.webp";
+    iconImgElement.src = "../media/icons/connecting.webp";
 
     textElement.disabled = true;
     textElement.textContent = "Conectando...";
@@ -27,7 +27,7 @@ function disableUI() {
 
 function enableUI(status) {
     iconElement.disabled = false;
-    iconImgElement.src = "/assets/icons/" + (status.online ? "success.png" : "failure.png");
+    iconImgElement.src = "../media/icons/" + (status.online ? "success.png" : "failure.png");
 
     textElement.disabled = false;
     textElement.textContent = status.online ? "Aberto!" : "Fechado!";
@@ -48,8 +48,8 @@ function updatePlayerGrid(playerNames) {
     for (const name of playerNames) {
         const skin = document.createElement("img");
         skin.classList.add("players_skin");
-        skin.onerror = () => (skin.src = "/assets/players/default.png");
-        skin.src = `/assets/players/${name}.png`;
+        skin.onerror = () => (skin.src = "../media/players/default.png");
+        skin.src = `../media/players/${name}.png`;
 
         const nameDiv = document.createElement("div");
         nameDiv.classList.add("players_name");

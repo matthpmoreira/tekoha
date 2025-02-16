@@ -1,7 +1,8 @@
 {
     "type": "module",
     "scripts": {
-        "dev": "five-server",
+        "build": "rm -r dist && node src/build.js",
+        "dev": "npm run build && nodemon --watch 'src' -e '*' --exec 'npm run build' & five-server",
         "lint": "prettier --write !**/reset.css . | grep -v 'unchanged'; eslint ."
     },
     "devDependencies": {
@@ -9,6 +10,11 @@
         "eslint": "^9.18.0",
         "five-server": "^0.4.0",
         "globals": "^15.14.0",
+        "gray-matter": "^4.0.3",
+        "markdown-it": "^14.1.0",
+        "mustache": "^4.2.0",
+        "node": "^23.8.0",
+        "nodemon": "^3.1.9",
         "prettier": "^3.4.2"
     }
 }

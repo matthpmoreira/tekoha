@@ -31,7 +31,7 @@ body {
     max-width: 458px;
     padding: 0.25rem;
     border: 4px solid transparent;
-    border-image: url("/assets/gui/tooltip.png") 2 fill / 1 repeat;
+    border-image: url("../media/gui/tooltip.png") 2 fill / 1 repeat;
 
     color: white;
     font-size: 20px;
@@ -59,9 +59,9 @@ body {
 }
 
 .players_grid {
-    height: min(155px, 100%);
+    min-height: 175px;
     padding: 0.66rem;
-    overflow: scroll;
+    overflow-y: scroll;
 
     display: flex;
     flex-wrap: wrap;

@@ -20,7 +20,7 @@ body {
     width: min(1000px, 100%);
     padding: 1.5rem;
     border: 24px solid transparent;
-    border-image: url("/assets/gui/map.png") 8 fill / 1 repeat;
+    border-image: url("../media/gui/map.png") 8 fill / 1 repeat;
     image-rendering: pixelated;
 }
 

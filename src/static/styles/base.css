@@ -1,15 +1,15 @@
 @font-face {
     font-family: "Minecraft";
-    src: url("/assets/Minecraft.ttf") format("truetype");
+    src: url("../fonts/Minecraft.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 :root {
-    --default-cursor: url("/assets/cursor/default.png"), default;
-    --pointer-cursor: url("/assets/cursor/pointer.png") 10 10, pointer;
-    --text-cursor: url("/assets/cursor/text.png") 6 10, text;
+    --default-cursor: url("../media/cursor/default.png"), default;
+    --pointer-cursor: url("../media/cursor/pointer.png") 10 10, pointer;
+    --text-cursor: url("../media/cursor/text.png") 6 10, text;
 }
 
 body,
@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    background-image: url("/assets/background.webp");
+    background-image: url("../media/background.webp");
     background-attachment: fixed;
     background-size: cover;
 }

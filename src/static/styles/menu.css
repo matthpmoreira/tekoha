@@ -2,7 +2,7 @@
     all: unset;
 
     padding: 7px; /* Quite an arbitrary value, but it matches with the final size of the icons and makes every button have the same height */
-    background-image: url("/assets/gui/button-background.png");
+    background-image: url("../media/gui/button-background.png");
     background-size: calc(196px * 2); /* Based on image proportions */
     border: 2px solid black;
     box-shadow:
@@ -38,7 +38,7 @@
 
 .menu_button:hover:not([disabled]) {
     color: yellow;
-    background-image: url("/assets/gui/button-background-hover.png");
+    background-image: url("../media/gui/button-background-hover.png");
     box-shadow:
         inset 2px 2px #bdc6ff,
         inset -2px -4px #59639a;
@@ -46,7 +46,7 @@
 
 .menu_button:disabled {
     box-shadow: unset;
-    background-image: url("/assets/gui/button-background-disabled.png");
+    background-image: url("../media/gui/button-background-disabled.png");
     cursor: var(--default-cursor);
 }
 
@@ -54,7 +54,7 @@
     background-color: black;
     image-rendering: pixelated;
     border: 6px solid transparent;
-    border-image: url("/assets/gui/panel-border.png") 3 fill / 1 stretch;
+    border-image: url("../media/gui/panel-border.png") 3 fill / 1 stretch;
 
     color: white;
     font-size: 20px;

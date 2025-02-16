@@ -4,18 +4,18 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Tekohá</title>
-        <link rel="stylesheet" href="/styles/reset.css" />
-        <link rel="stylesheet" href="/styles/base.css" />
-        <link rel="stylesheet" href="/styles/menu.css" />
-        <link rel="stylesheet" href="/styles/home.css" />
-        <link rel="preload" as="image" href="/assets/gui/button-background-hover.png" />
-        <link rel="preload" as="image" href="/assets/gui/tooltip-border.png" />
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/base.css" />
+        <link rel="stylesheet" href="styles/menu.css" />
+        <link rel="stylesheet" href="styles/home.css" />
+        <link rel="preload" as="image" href="media/gui/button-background-hover.png" />
+        <link rel="preload" as="image" href="media/gui/tooltip-border.png" />
     </head>
 
     <body>
         <main class="container">
             <div class="title">
-                <img id="logo" class="logo" src="/assets/logo.png" alt="Tekohá" draggable="false" />
+                <img id="logo" class="logo" src="media/logo.png" alt="Tekohá" draggable="false" />
                 <div id="tekoha-tooltip" class="tooltip">
                     Tekohá é o lugar físico - incluindo terra, floresta, campos, cursos de água, plantas e remédios -
                     onde o modo de vida dos povos indígenas Guarani e Kaiowá se desenvolve.
@@ -25,7 +25,7 @@
             <div class="menu">
                 <div class="menu_row">
                     <button id="status_icon" class="menu_button -icon" disabled>
-                        <img src="/assets/icons/connecting.webp" alt="" />
+                        <img src="media/icons/connecting.webp" alt="" />
                     </button>
                     <button id="status_text" class="menu_button" disabled>Conectando...</button>
                 </div>
@@ -37,23 +37,23 @@
                 <div id="players_grid" class="players_grid panel"></div>
 
                 <div class="menu_row">
-                    <a id="mods" class="menu_button" href="/mods.html">Mods</a>
+                    <a id="mods" class="menu_button" href="mods.html">Mods</a>
                 </div>
 
                 <div class="menu_row">
-                    <a id="guides" class="menu_button" href="/guias.html">Guias</a>
+                    <a id="guides" class="menu_button" href="guias.html">Guias</a>
                 </div>
             </div>
         </main>
 
         <div class="footer">
-            <a class="footer_link" href="/discord">
-                <img src="/assets/icons/discord.webp" alt="" />
+            <a class="footer_link" href="discord">
+                <img src="media/icons/discord.webp" alt="" />
             </a>
         </div>
 
-        <script src="/scripts/status.js"></script>
-        <script src="/scripts/tekoha-tooltip.js"></script>
+        <script src="scripts/status.js"></script>
+        <script src="scripts/tekoha-tooltip.js"></script>
 <!--        <script src="/scripts/windows-fix.js"></script>-->
     </body>
 </html>
