@@ -1,7 +1,7 @@
 {
     "type": "module",
     "scripts": {
-        "build": "rm -r dist && node src/build.js",
+        "build": "rm -rf dist && node src/build.js",
         "dev": "npm run build && nodemon --watch 'src' -e '*' --exec 'npm run build' & five-server",
         "lint": "prettier --write !**/reset.css . | grep -v 'unchanged'; eslint ."
     },
