@@ -22,6 +22,10 @@ body {
     border: 24px solid transparent;
     border-image: url("../media/gui/map.png") 8 fill / 1 repeat;
     image-rendering: pixelated;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .accordion {
