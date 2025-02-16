@@ -40,6 +40,11 @@ body {
 .accordion_body {
     padding: 1rem;
     text-wrap: pretty;
+    text-align: justify;
+
+    p {
+        text-indent: 4ch;
+    }
 }
 
 .accordion_body.panel {
