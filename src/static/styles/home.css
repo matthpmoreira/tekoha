@@ -59,7 +59,7 @@ body {
 }
 
 .players_grid {
-    min-height: 175px;
+    max-height: 175px;
     padding: 0.66rem;
     overflow-y: scroll;
 
